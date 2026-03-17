@@ -7,25 +7,26 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  background-color: #26474E;
-  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0D0D0D;
+  color: #FFFFFF;
   line-height: 1.6;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Layout */
 .site-header,
-.content,
-.site-footer {
-  max-width: 900px;
+.content {
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
-.site-header {
-  padding-top: 4rem;
-  padding-bottom: 3rem;
+.layout {
+  display: flex;
+  flex: 1;
 }
 
 /* Typography */
@@ -36,7 +37,7 @@ body {
 
 .site-subtitle {
   margin-top: 0.5rem;
-  color: #F9968B;
+  color: #F1F1F1;
 }
 
 h2 {
@@ -63,10 +64,87 @@ a:hover {
   margin: 0.4rem 0;
 }
 
-/* Footer */
+/* footer */
 .site-footer {
-  border-top: 1px solid #F27438;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #F9968B;
+  margin-top: auto;
+
+  background: #020617;
+  border-top: 2px solid #38bdf8;
+
+  padding: 25px 20px;
+
+  text-align: center;
+  color: #94a3b8;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+
+/* sidebar */
+
+.sidebar {
+  width: 250px;
+  background: #020617;
+  padding: 20px;
+  border-right: 2px solid #38bdf8;
+}
+
+.logo {
+  margin-top: 0;
+}
+
+/* content */
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* menu */
+
+.menu-item {
+  margin-top: 20px;
+}
+
+.menu-item {
+  margin-top: 20px;
+}
+
+.dropdown-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* contenu replié par défaut */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  transition: max-height 0.5s ease;
+}
+
+/* liens */
+.dropdown-content a {
+  display: block;
+  padding: 6px 0;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* ouverture au hover */
+.menu-item:hover .dropdown-content {
+  max-height: 200px;
+  /* assez grand pour contenir les liens */
 }

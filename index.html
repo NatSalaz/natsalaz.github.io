@@ -12,38 +12,76 @@
 </head>
 
 <body>
+  <div class="layout">
 
-  <header class="site-header">
-    <h1 class="site-title">Nathan Salazar</h1>
-    <p class="site-subtitle">Personal website -- experiments & notes</p>
-  </header>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-  <main class="content">
-    <section>
-      <h2>About</h2>
-      <p>
-        This is a small personal website to share experiments,
-        notes and miscellaneous things.
-      </p>
-    </section>
-    <section>
-      <h2>Experiments</h2>
-      <ul class="links">
-        <li><a href="cube.html">3D Cube</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Contact</h2>
-      <ul class="links">
-        <li><a href="https://github.com/NatSalaz" target="_blank">GitHub</a></li>
-        <li><a href="mailto:nathansalazarie@gmail.com">Contact</a></li>
-      </ul>
-    </section>
-  </main>
+      <h2 class="logo">Nathan Salazar</h2>
+
+      <nav>
+
+        <div class="menu-item">
+          <button class="dropdown-btn">Experiments</button>
+
+          <div class="dropdown-content">
+            <a href="experiments/cube.html">Cube</a>
+            <a href="experiments/sphere.html">Sphere</a>
+            <a href="experiments/forest.html">Forest</a>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <button class="dropdown-btn">Resources</button>
+
+          <div class="dropdown-content">
+            <a href="https://threejs.org/">Three.js</a>
+            <a href="https://get.webgl.org/">WebGL</a>
+          </div>
+        </div>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- Not used yet <header class="site-header"> </header>-->
+
+
+    <main class="content">
+      <section>
+        <h2>About</h2>
+        <p>
+          This is a small personal website to share experiments,
+          notes and miscellaneous things.
+        </p>
+      </section>
+      <section>
+        <h2>Experiments</h2>
+        <ul class="links">
+          <li><a href="experiments/cube.html">3D Cube</a></li>
+        </ul>
+        <ul class="links">
+          <li><a href="experiments/sphere.html">3D Sphere</a></li>
+        </ul>
+        <ul class="links">
+          <li><a href="experiments/trigo.html">Trigonometry</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contact</h2>
+        <ul class="links">
+          <li><a href="https://github.com/NatSalaz" target="_blank">GitHub</a></li>
+          <li><a href="mailto:nathansalazarie@gmail.com">Contact</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
 
   <footer class="site-footer">
     <p>© 2026 NatSalaz -- All rights reserved.</p>
   </footer>
+
 
 </body>
 
