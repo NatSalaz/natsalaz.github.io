@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cercle Trigonométrique</title>
+  <link rel="stylesheet" href="trigo/trigo.css" />
+</head>
+
+<body>
+
+  <h1>Cercle trigonométrique</h1>
+  <div class="unit-toggle">
+    <button id="degBtn" class="active">DEG</button>
+    <button id="radBtn">RAD</button>
+  </div>
+  <div class="layout">
+    <!-- Canvas -->
+    <div class="canvas-wrap" id="wrap">
+      <canvas id="c"></canvas>
+    </div>
+
+    <!-- Side panel -->
+    <div class="side">
+
+      <!-- Values -->
+      <div class="value-grid">
+
+        <div class="value-card angle">
+
+          <div class="card-header">
+            <span class="card-label">Angle θ</span>
+            <span class="color-box angle"></span>
+          </div>
+
+          <div class="card-value angle" id="vAngleDeg">0°</div>
+          <div class="card-sub" id="vAngleRad">0 rad</div>
+
+          <label class="toggle-row">
+            <input type="checkbox" id="chkAngle" checked>
+            <span>Afficher</span>
+          </label>
+
+        </div>
+
+        <div class="value-card cos" id="cardCos">
+
+          <div class="card-header">
+            <span class="card-label">cos(θ)</span>
+            <span class="color-box cos"></span>
+          </div>
+
+          <div class="card-value cos" id="vCos">1.0000</div>
+
+          <label class="toggle-row">
+            <input type="checkbox" id="chkCos" checked>
+            <span>Afficher</span>
+          </label>
+
+        </div>
+
+        <div class="value-card sin" id="cardSin">
+
+          <div class="card-header">
+            <span class="card-label">sin(θ)</span>
+            <span class="color-box sin"></span>
+          </div>
+
+          <div class="card-value sin" id="vSin">0.0000</div>
+
+          <label class="toggle-row">
+            <input type="checkbox" id="chkSin" checked>
+            <span>Afficher</span>
+          </label>
+
+        </div>
+
+        <div class="value-card tan" id="cardTan">
+
+          <div class="card-header">
+            <span class="card-label">tan(θ)</span>
+            <span class="color-box tan"></span>
+          </div>
+
+          <div class="card-value tan" id="vTan">0.0000</div>
+
+          <label class="toggle-row">
+            <input type="checkbox" id="chkTan" checked>
+            <span>Afficher</span>
+          </label>
+
+        </div>
+
+      </div>
+      <label class="grid-toggle">
+        <input type="checkbox" id="chkGrid" checked>
+        Afficher la grille
+      </label>
+      <!-- Slider -->
+      <div class="slider-wrap">
+
+        <div class="angle-axis">
+
+          <span class="axis-label start" id="lblStart">0°</span>
+          <span class="axis-label q1" id="lbl90">90°</span>
+          <span class="axis-label q2" id="lbl180">180°</span>
+          <span class="axis-label q3" id="lbl270">270°</span>
+          <span class="axis-label end" id="lbl360">360°</span>
+
+          <input type="range" id="slider" min="0" max="360" step="0.5" value="0">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p class="hint">Cliquez et faites glisser sur le cercle · ou utilisez le curseur</p>
+
+  <script src="trigo/trigo.js"></script>
+
+</body>
+
+</html>

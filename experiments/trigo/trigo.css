@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+:root {
+  --bg: #fff;
+  --panel: #f7f7f7;
+  --border: #000;
+  --cos: #1a4bb4;
+  --sin: #b81b1b;
+  --tan: #17b35d;
+  --angle: #000;
+  --text: #1a1a2e;
+  --muted: #8888aa
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(.8rem, 2vw, 2rem);
+  gap: clamp(.6rem, 1vh, 1.4rem);
+  overflow: hidden
+}
+
+h1 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-style: italic
+}
+
+.layout {
+  flex: 1;
+  width: 100%;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: 1fr clamp(240px, 24vw, 340px);
+  gap: clamp(1rem, 2vw, 2rem);
+  height: 100%;
+  min-height: 0
+}
+
+.canvas-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 0
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  max-width: 100%;
+  max-height: 100%;
+  display: block
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(.5rem, .8vh, 1rem);
+  height: 100%
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(1fr, 4);
+  gap: clamp(.3rem, .6vh, .6rem)
+}
+
+.value-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: clamp(.35rem, .6vw, .7rem) clamp(.5rem, .9vw, .9rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px
+}
+
+.value-card.angle::before {
+  background: var(--angle)
+}
+
+.value-card.cos::before {
+  background: var(--cos)
+}
+
+.value-card.sin::before {
+  background: var(--sin)
+}
+
+.value-card.tan::before {
+  background: var(--tan)
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px
+}
+
+.card-label {
+  font-size: clamp(.45rem, .6vw, .7rem);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--muted)
+}
+
+.card-value {
+  font-size: clamp(1rem, 1.1vw + .8vh, 1.5rem);
+  font-variant-numeric: tabular-nums;
+  text-align: center
+}
+
+.card-sub {
+  font-size: clamp(.45rem, .6vw, .7rem);
+  color: var(--muted)
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: .65rem;
+  cursor: pointer;
+  margin-top: 2px
+}
+
+.toggle-row input {
+  width: 12px;
+  height: 12px
+}
+
+.grid-toggle {
+  font-size: .75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px
+}
+
+.slider-wrap {
+  margin-top: .3rem
+}
+
+.slider-label {
+  font-size: clamp(.5rem, .7vw, .7rem);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--muted)
+}
+
+input[type=range] {
+  width: 100%;
+  height: 4px;
+  background: var(--border)
+}
+
+/* AXIS STYLE SLIDER */
+.angle-axis {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 10px 0;
+}
+
+/* axis line */
+
+.angle-axis::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 14px;
+  height: 2px;
+  background: black;
+  z-index: 1;
+}
+
+/* axis bars */
+.angle-axis::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  height: 12px;
+  background:
+    linear-gradient(black, black) left/2px 12px no-repeat,
+    linear-gradient(black, black) right/2px 12px no-repeat;
+}
+
+/* slider invisible track */
+.angle-axis input[type=range] {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  -webkit-appearance: none;
+  z-index: 2;
+}
+
+/* thumb */
+.angle-axis input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 18px;
+  background: black;
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: -27px;
+  /* moves the cursor up */
+}
+
+.angle-axis input[type=range]::-moz-range-thumb {
+  width: 4px;
+  height: 18px;
+  background: black;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+/* labels */
+.axis-label {
+  position: absolute;
+  font-size: .6rem;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.axis-label.start {
+  left: 0%;
+  transform: none;
+}
+
+.axis-label.q1 {
+  left: 25%;
+}
+
+.axis-label.q2 {
+  left: 50%;
+}
+
+.axis-label.q3 {
+  left: 75%;
+}
+
+.axis-label.end {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+/* Deg to rad and rad to deg */
+.unit-toggle {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.unit-toggle button {
+  border: 1px solid black;
+  background: white;
+  padding: 3px 8px;
+  font-size: .7rem;
+  cursor: pointer;
+}
+
+.unit-toggle button.active {
+  background: black;
+  color: white;
+}
+
+@media(max-width:900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) auto
+  }
+
+  .canvas-wrap {
+    order: 1
+  }
+
+  .side {
+    order: 2;
+    gap: .35rem
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: .4rem
+  }
+
+  .value-card {
+    padding: .2rem .25rem;
+    min-height: 34px
+  }
+
+  .card-value {
+    font-size: .85rem
+  }
+
+  .card-label {
+    font-size: .42rem
+  }
+
+  .card-sub {
+    display: none
+  }
+
+  .toggle-row {
+    font-size: .55rem
+  }
+
+  .grid-toggle {
+    font-size: .65rem
+  }
+
+  .slider-label {
+    font-size: .55rem
+  }
+
+  input[type=range] {
+    height: 3px
+  }
+}
