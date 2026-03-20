@@ -12,37 +12,16 @@
 </head>
 
 <body>
-  <div class="layout">
+  <header class="topnav" id="topnav">
+    <div class="topnav-inner">
+      <a href="../index.html" class="topnav-brand">Nathan Salazar</a>
 
-    <!-- LEFT SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-topbar">
-        <h2>CV</h2>
-        <button class="sidebar-hamburger" id="sidebar-hamburger" aria-label="Menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="sidebar-body">
-        <a class="sidebar-back" href="../index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-          Accueil
-        </a>
-        <nav class="sidebar-nav">
-          <a href="#experiences">Expériences</a>
-          <a href="#etudes">Études</a>
-          <a href="#autres">Autres</a>
-        </nav>
+      <nav class="topnav-nav" id="topnav-nav">
+        <a href="#experiences">Expériences</a>
+        <a href="#etudes">Études</a>
+        <a href="#autres">Autres</a>
         <a class="cv-download-btn" href="../CV.pdf" download>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
             <polyline points="7 10 12 15 17 10" />
@@ -50,7 +29,7 @@
           </svg>
           CV (PDF)
         </a>
-      </div>
+      </nav>
 
       <button class="theme-toggle" id="theme-toggle" title="Changer le thème">
         <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -58,7 +37,19 @@
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
       </button>
-    </aside>
+
+      <button class="topnav-hamburger" id="topnav-hamburger" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
 
     <!-- CV CONTENT -->
     <main class="cv-content">
