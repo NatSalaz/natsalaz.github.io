@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CV — Nathan Salazar</title>
+  <meta name="description" content="CV de Nathan Salazar" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="cv.css" />
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-topbar">
+        <h2>CV</h2>
+        <button class="sidebar-hamburger" id="sidebar-hamburger" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="sidebar-body">
+        <a class="sidebar-back" href="../index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          Accueil
+        </a>
+        <nav class="sidebar-nav">
+          <a href="#experiences">Expériences</a>
+          <a href="#etudes">Études</a>
+          <a href="#autres">Autres</a>
+        </nav>
+        <a class="cv-download-btn" href="../CV.pdf" download>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          CV (PDF)
+        </a>
+      </div>
+
+      <button class="theme-toggle" id="theme-toggle" title="Changer le thème">
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </aside>
+
+    <!-- CV CONTENT -->
+    <main class="cv-content">
+
+      <div class="cv-header">
+        <h1>Nathan Salazar</h1>
+        <p>Informaticien · <a href="mailto:nathansalazarie@gmail.com">nathansalazarie@gmail.com</a> · <a
+            href="https://github.com/NatSalaz" target="_blank">GitHub</a></p>
+      </div>
+
+      <!-- EXPÉRIENCES PROFESSIONNELLES -->
+      <section class="cv-section" id="experiences">
+        <h2>Expériences professionnelles</h2>
+
+        <div class="cv-entry">
+          <div class="cv-entry-logos">
+            <div class="cv-entry-logo">
+              <img src="logos/liris.png" alt="Logo LIRIS" />
+            </div>
+            <div class="cv-entry-logo">
+              <img src="logos/ecl.png" alt="Logo ECL" />
+            </div>
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Doctorant - LIRIS, École Centrale de Lyon</span>
+              <span class="cv-entry-date">Oct. 2024 - Présent</span>
+            </div>
+            <div class="cv-entry-subtitle">Villeurbanne/Écully, France</div>
+            <ul>
+              <li>Recherches portant sur la construction d'un modèle de fondation des mouvements humain pour l'analyse
+                et la synthèse des actions et expressions corporelles</li>
+              <li>Lecture de nombreux papiers afin d'établir une vision correcte de l'état de l'art dans le domaine de
+                la
+                génération de mouvements humains en 3D et l'estimation de poses humaines et d'expressions faciales à
+                partir de vidéos RGB</li>
+              <li>Création d'une pipeline de collecte de données de mouvements 3D à partir de vidéos récoltées sur
+                Internet et création d'un jeu de données en utilisant ce pipeline</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-logo">
+            <img src="logos/polytech.png" alt="Logo Polytech Lyon" />
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Enseignement vacataire - Polytech Lyon</span>
+              <span class="cv-entry-date">Oct 2024 - Présent</span>
+            </div>
+            <div class="cv-entry-subtitle">Villeurbanne, France</div>
+            <ul>
+              <li>Enseignement de matières (Architecture des Réseaux et des Systèmes Informatiques Répartis partie
+                Protocole Réseaux, Bases de données partie XML, Modélisation des données (Merise), Introduction aux
+                réseaux de neurones) à des élèves de 3,4 et 5e années d'étude. Principalement des heures de TPs,
+                quelques heures de TDs et de surveillance d'examens</li>
+              <li>Aide à l'écritures de sujets de TPs en Réseaux et Bases de données</li>
+              <li>Aide à l'écriture des sujets d'interrogation finales en Introduction aux réseaux et de neurones</li>
+              <li>Écriture d'un sujet d'interrogation en base de données (Sujet sur les bases XML) en contrôle continu
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-logos">
+            <div class="cv-entry-logo">
+              <img src="logos/liris.png" alt="Logo LIRIS" />
+            </div>
+            <div class="cv-entry-logo">
+              <img src="logos/ucbl.png" alt="Logo Université Claude Bernard Lyon 1" />
+            </div>
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Stagiaire de recherche - LIRIS, Université Claude Bernard Lyon 1</span>
+              <span class="cv-entry-date">Fév. 2024 - Juil. 2024</span>
+            </div>
+            <div class="cv-entry-subtitle">Villeurbanne, France</div>
+            <ul>
+              <li>Recherches portant sur la représentation latente d'images d'oiseaux aux seins de modèles
+                d'autoencodeurs</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">R</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-entry cv-entry--compact">
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Réceptionniste - Domaine de l'Épinette</span>
+              <span class="cv-entry-date">Été 2023</span>
+            </div>
+            <div class="cv-entry-subtitle">Châtillon, France</div>
+          </div>
+        </div>
+
+        <div class="cv-entry cv-entry--compact">
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Crew Member - Burger King Ireland</span>
+              <span class="cv-entry-date">Été 2022</span>
+            </div>
+            <div class="cv-entry-subtitle">Dublin, Irlande</div>
+          </div>
+        </div>
+
+        <div class="cv-entry cv-entry--compact">
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Employé Communal - Ville de Lons-Le-Saunier</span>
+              <span class="cv-entry-date">Été 2021</span>
+            </div>
+            <div class="cv-entry-subtitle">Lons-Le-Saunier, France</div>
+          </div>
+        </div>
+
+        <div class="cv-entry cv-entry--compact">
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Facteur Itinérant - La Poste</span>
+              <span class="cv-entry-date">Été 2020</span>
+            </div>
+            <div class="cv-entry-subtitle">Clairvaux-Les-Lacs, France</div>
+          </div>
+        </div>
+
+        <div class="cv-entry cv-entry--compact">
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Brancardier - Hôpital de Lons-Le-Saunier</span>
+              <span class="cv-entry-date">Été 2019</span>
+            </div>
+            <div class="cv-entry-subtitle">Lons-Le-Saunier, France</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ÉTUDES -->
+      <section class="cv-section" id="etudes">
+        <h2>Études</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-logos">
+            <div class="cv-entry-logo">
+              <img src="logos/liris.png" alt="Logo LIRIS" />
+            </div>
+            <div class="cv-entry-logo">
+              <img src="logos/ecl.png" alt="Logo ECL" />
+            </div>
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Doctorant - LIRIS, École Centrale de Lyon</span>
+              <span class="cv-entry-date">Oct. 2024 - Présent</span>
+            </div>
+            <div class="cv-entry-subtitle">Villeurbanne, France</div>
+            <p>Recherches portant sur la construction d'un modèle de fondation des mouvements humain pour l'analyse
+              et la synthèse des actions et expressions corporelles</p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-logo">
+            <img src="logos/ucbl.png" alt="Logo Université Claude Bernard Lyon 1" />
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Master 2 IA - Université Claude Bernard Lyon 1</span>
+              <span class="cv-entry-date">2023 - 2024</span>
+            </div>
+            <div class="cv-entry-subtitle">Villeurbanne, France</div>
+            <p>Multi-Agents & Agents intelligents, Bio-Inspired Machine Learning, Techniques d'Apprentissage
+              Automatique, AI & Cognition, ...</p>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-logo">
+            <img src="logos/pulse.png" alt="Logo Pulse College" />
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Ba in Creative Technologies & Digital Art - Pulse College, Irlande</span>
+              <span class="cv-entry-date">2022 - 2023</span>
+            </div>
+            <div class="cv-entry-subtitle">Dublin, Irlande</div>
+            <p>Modélisation 3D, Animation 2D, programmation pour le jeu vidéo, ...</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-logos">
+            <div class="cv-entry-logo">
+              <img src="logos/maynooth.png" alt="Logo Maynooth" />
+            </div>
+            <div class="cv-entry-logo">
+              <img src="logos/ubourgogne.png" alt="Logo UB" />
+            </div>
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Master 1 Informatique - Maynooth University/Université de Bourgogne</span>
+              <span class="cv-entry-date">2021 - 2022</span>
+            </div>
+            <div class="cv-entry-subtitle">Maynooth, Irlande (Erasmus) / Dijon, France</div>
+            <p>IA et réseaux de neurones, Images de synthèse, traitement d’images et audio, génie logiciel, ...
+            </p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-logo">
+            <img src="logos/ubourgogne.png" alt="Logo UB" />
+          </div>
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Licence Informatique - Université de Bourgogne</span>
+              <span class="cv-entry-date">2018 - 2021</span>
+            </div>
+            <div class="cv-entry-subtitle">Dijon, France</div>
+            <p>Synthèse d’images, Bases de données, Développement d’application web, Modélisation, Systèmes et
+              réseaux, Graphes, Conception avancée d’applications, ...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUTRES -->
+      <section class="cv-section" id="autres">
+        <h2>Autres</h2>
+
+        <div class="cv-entry">
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Langues</span>
+            </div>
+            <ul>
+              <li>Français - Maternelle</li>
+              <li>Anglais - Courant</li>
+              <li>Espagnol - Avancé</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-body">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Centres d'intérêts</span>
+            </div>
+            <ul>
+              <li>Moto</li>
+              <li>Natation</li>
+              <li>Voyage</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 NatSalaz — All rights reserved.</p>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+
+</html>

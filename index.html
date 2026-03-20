@@ -17,8 +17,17 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
-      <h2 class="logo">Nathan Salazar</h2>
+      <div class="sidebar-topbar">
+        <h2>Nathan Salazar</h2>
+        <button class="sidebar-hamburger" id="sidebar-hamburger" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
 
+      <div class="sidebar-body">
       <nav>
 
         <div class="menu-item">
@@ -27,7 +36,7 @@
           <div class="dropdown-content">
             <a href="experiments/cube.html">Cube</a>
             <a href="experiments/sphere.html">Sphere</a>
-            <a href="experiments/forest.html">Forest</a>
+            <a href="experiments/trigo.html">Trigonometry</a>
           </div>
         </div>
 
@@ -41,7 +50,14 @@
         </div>
 
       </nav>
+      </div>
 
+      <button class="theme-toggle" id="theme-toggle" title="Changer le thème">
+        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
     </aside>
 
 
@@ -57,14 +73,16 @@
         </p>
       </section>
       <section>
+        <h2>About me</h2>
+        <ul class="links">
+          <li><a href="aboutme/cv.html">CV</a></li>
+        </ul>
+      </section>
+      <section>
         <h2>Experiments</h2>
         <ul class="links">
           <li><a href="experiments/cube.html">3D Cube</a></li>
-        </ul>
-        <ul class="links">
           <li><a href="experiments/sphere.html">3D Sphere</a></li>
-        </ul>
-        <ul class="links">
           <li><a href="experiments/trigo.html">Trigonometry</a></li>
         </ul>
       </section>
@@ -83,6 +101,7 @@
   </footer>
 
 
+  <script src="theme.js"></script>
 </body>
 
 </html>

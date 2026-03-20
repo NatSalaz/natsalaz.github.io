@@ -1,15 +1,68 @@
-/* Base reset */
+/* Dark theme (default) */
+:root {
+  --accent: #f8e238;
+  --accent-light: #fce57d;
+  --bg: #150e0b;
+  --bg-surface: #150a02;
+  --bg-card: #1a1812;
+  --border: #553f33;
+  --text: #FFFFFF;
+  --text-soft: #dbd5d1;
+  --text-muted: #b8a594;
+}
+
+/* Light theme */
+[data-theme="dark"] {
+  --accent: #824a00;
+  --accent-light: #fad38b;
+  --bg: #fcfaf8;
+  --bg-surface: #f0ece2;
+  --bg-card: #ffffff;
+  --border: #b8a594;
+  --text: #0f172a;
+  --text-soft: #554633;
+  --text-muted: #695447;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-top: auto;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #0D0D0D;
-  color: #FFFFFF;
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 
   display: flex;
@@ -17,19 +70,17 @@ body {
   min-height: 100vh;
 }
 
-/* Layout */
+.layout {
+  display: flex;
+  flex: 1;
+}
+
 .site-header,
 .content {
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
-.layout {
-  display: flex;
-  flex: 1;
-}
-
-/* Typography */
 .site-title {
   font-size: 2.5rem;
   margin: 0;
@@ -37,7 +88,7 @@ body {
 
 .site-subtitle {
   margin-top: 0.5rem;
-  color: #F1F1F1;
+  color: var(--text-soft);
 }
 
 h2 {
@@ -45,9 +96,8 @@ h2 {
   font-size: 1.5rem;
 }
 
-/* Links */
 a {
-  color: #38bdf8;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -64,17 +114,17 @@ a:hover {
   margin: 0.4rem 0;
 }
 
-/* footer */
+/* Footer */
 .site-footer {
   margin-top: auto;
 
-  background: #020617;
-  border-top: 2px solid #38bdf8;
+  background: var(--bg-surface);
+  border-top: 2px solid var(--accent);
 
   padding: 25px 20px;
 
   text-align: center;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 .footer-content {
@@ -82,33 +132,68 @@ a:hover {
   margin: auto;
 }
 
-
-/* sidebar */
-
 .sidebar {
-  width: 250px;
-  background: #020617;
-  padding: 20px;
-  border-right: 2px solid #38bdf8;
+  width: 220px;
+  background: var(--bg-surface);
+  border-right: 2px solid var(--accent);
+  padding: 30px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
 }
 
-.logo {
+.sidebar-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.15s;
+}
+
+.sidebar-back:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.sidebar h2 {
   margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
 }
 
-/* content */
+.sidebar-nav a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--text-soft);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: background 0.15s, color 0.15s;
+  margin-bottom: 4px;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background: var(--bg-card);
+  color: var(--accent);
+  text-decoration: none;
+}
 
 .content {
   flex: 1;
   padding: 40px;
 }
 
-/* menu */
-
-.menu-item {
-  margin-top: 20px;
-}
-
+/* Dropdown menu */
 .menu-item {
   margin-top: 20px;
 }
@@ -117,13 +202,12 @@ a:hover {
   width: 100%;
   background: none;
   border: none;
-  color: #e5e7eb;
+  color: var(--text-soft);
   font-size: 16px;
   text-align: left;
   cursor: pointer;
 }
 
-/* contenu replié par défaut */
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
@@ -131,11 +215,10 @@ a:hover {
   transition: max-height 0.5s ease;
 }
 
-/* liens */
 .dropdown-content a {
   display: block;
   padding: 6px 0;
-  color: #38bdf8;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -143,8 +226,108 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ouverture au hover */
 .menu-item:hover .dropdown-content {
   max-height: 200px;
-  /* assez grand pour contenir les liens */
+}
+
+/* Sidebar topbar (visible on mobile only) */
+.sidebar-topbar {
+  display: none;
+}
+
+.sidebar-hamburger {
+  display: none;
+}
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+    padding: 20px 12px;
+  }
+
+  .content {
+    padding: 24px 20px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 680px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 56px;
+    overflow: hidden;
+    z-index: 100;
+    border-right: none;
+    border-bottom: 2px solid var(--accent);
+    padding: 0 16px;
+    transition: height 0.25s ease;
+  }
+
+  .sidebar--open {
+    height: auto;
+    max-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .sidebar-topbar {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    flex-shrink: 0;
+  }
+
+  .sidebar-topbar h2,
+  .sidebar h2 {
+    flex: 1;
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .sidebar-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+
+  .sidebar-body {
+    padding: 8px 0 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .layout {
+    flex-direction: column;
+    padding-top: 56px;
+  }
+
+  .content {
+    padding: 20px 16px;
+  }
+
+  .theme-toggle {
+    bottom: 16px;
+    right: 16px;
+    left: auto;
+  }
+
+  /* Dropdown au clic sur mobile */
+  .menu-item:hover .dropdown-content {
+    max-height: 0;
+  }
+
+  .menu-item.open .dropdown-content {
+    max-height: 200px;
+  }
 }
