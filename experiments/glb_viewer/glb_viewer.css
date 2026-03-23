@@ -31,6 +31,24 @@ canvas {
 #app {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.back-fixed {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 40;
+  color: var(--muted);
+  font-size: .8rem;
+  text-decoration: none;
+  letter-spacing: .05em;
+  transition: color .2s;
+}
+
+.back-fixed:hover {
+  color: var(--accent);
 }
 
 .back {
