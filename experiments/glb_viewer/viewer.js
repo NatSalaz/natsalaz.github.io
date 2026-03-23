@@ -101,7 +101,7 @@ function fitCamera(object) {
 function loadSequence(n) {
   loaderEl.classList.remove('hidden');
   progEl.style.width = '0%';
-  subEl.textContent = `séquence ${n}…`;
+  subEl.textContent = `Sequence ${n} …`;
   seqLabel.textContent = String(n).padStart(2, '0');
 
   if (current) { scene.remove(current); current = null; }

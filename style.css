@@ -134,9 +134,10 @@ a:hover { text-decoration: underline; }
   background: rgba(4, 18, 16, .55);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  overflow: hidden;
   position: relative;
 }
+
+.site-footer { overflow: hidden; }
 [data-theme="light"] .topnav,
 [data-theme="light"] .site-footer { background: rgba(224, 244, 244, .6); }
 
@@ -320,7 +321,7 @@ a:hover { text-decoration: underline; }
     right: 0;
     flex-direction: column;
     align-items: flex-start;
-    background: rgba(4, 18, 16, .85);
+    background: var(--bg-surface);
     backdrop-filter: blur(3px);
     border-bottom: 1px solid var(--border);
     padding: 12px 16px 16px;
