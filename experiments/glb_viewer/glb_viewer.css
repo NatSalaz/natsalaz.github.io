@@ -45,6 +45,8 @@ canvas {
   text-decoration: none;
   letter-spacing: .05em;
   transition: color .2s;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .back-fixed:hover {
