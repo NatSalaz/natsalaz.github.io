@@ -93,7 +93,7 @@ function fitCamera(object) {
   const fov = camera.fov * (Math.PI / 180);
   const dist = (Math.max(size.x, size.y, size.z) / (2 * Math.tan(fov / 2))) * 1.6;
 
-  camera.position.set(0, size.y * 0.55, dist);
+  camera.position.set(0, size.y * 0.55, -dist);
   controls.target.set(0, size.y * 0.45, 0);
   controls.update();
 }

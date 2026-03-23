@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <title>SMPL-X Sequences</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="glb_viewer.css" />
 </head>
-<body>
 
-  <a class="back" href="../index.html">← retour</a>
+<body>
 
   <div class="info-bar">
     <span class="label">séquence</span>
@@ -19,8 +22,11 @@
   </div>
 
   <div id="loader">
+    <a class="back" href="../../index.html">← Back</a>
     <div class="loader-title">Chargement</div>
-    <div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="prog"></div>
+    </div>
     <div class="loader-sub" id="loader-sub">séquence 1…</div>
   </div>
 
@@ -29,12 +35,14 @@
   <div class="controls">
     <div class="seq-picker">
       <button class="seq-btn active" data-seq="1">Séq. 1</button>
-      <button class="seq-btn"        data-seq="2">Séq. 2</button>
-      <button class="seq-btn"        data-seq="3">Séq. 3</button>
+      <button class="seq-btn" data-seq="2">Séq. 2</button>
+      <button class="seq-btn" data-seq="3">Séq. 3</button>
     </div>
     <div class="timeline">
       <button class="play-btn" id="play-btn" title="Lecture / Pause">
-        <svg id="play-icon" viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg>
+        <svg id="play-icon" viewBox="0 0 10 12">
+          <polygon points="0,0 10,6 0,12" />
+        </svg>
       </button>
       <input class="scrubber" type="range" id="scrubber" min="0" max="1" step="0.001" value="0" />
       <span class="time-label" id="time-label">0.0s</span>
@@ -53,4 +61,5 @@
   <script type="module" src="viewer.js"></script>
 
 </body>
+
 </html>

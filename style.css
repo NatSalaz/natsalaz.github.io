@@ -46,6 +46,18 @@ h2 { margin-top: 2.5rem; font-size: 1.5rem; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--text-muted);
+  font-size: .8rem;
+  text-decoration: none;
+  letter-spacing: .05em;
+  transition: color .2s;
+}
+.back:hover { color: var(--accent); text-decoration: none; }
+
 .layout { display: flex; flex: 1; padding-top: 60px; }
 .content { flex: 1; padding: 40px; margin: 0 auto; }
 
