@@ -35,18 +35,23 @@ canvas {
   z-index: 1;
 }
 
-.back-fixed {
+.ui-overlay {
   position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+}
+
+.back-fixed {
+  position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 40;
+  pointer-events: auto;
   color: var(--muted);
   font-size: .8rem;
   text-decoration: none;
   letter-spacing: .05em;
   transition: color .2s;
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .back-fixed:hover {

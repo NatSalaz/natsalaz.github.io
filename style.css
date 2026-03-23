@@ -306,7 +306,7 @@ a:hover { text-decoration: underline; }
 
 /* Mobile */
 @media (max-width: 680px) {
-  .topnav { height: 56px; }
+  .topnav { height: 56px; overflow: visible; }
   .topnav-inner { padding: 0 16px; }
   .layout { padding-top: 56px; }
   .content { padding: 20px 16px; }
@@ -314,7 +314,7 @@ a:hover { text-decoration: underline; }
 
   .topnav-nav {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 56px;
     left: 0;
     right: 0;
