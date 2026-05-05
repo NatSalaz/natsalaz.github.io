@@ -6,6 +6,8 @@ const PLAY_SVG = `<polygon points="0,0 10,6 0,12"/>`;
 const PAUSE_SVG = `<rect x="1" y="0" width="3" height="12"/><rect x="6" y="0" width="3" height="12"/>`;
 
 const loaderEl = document.getElementById('loader');
+const navHint = document.getElementById('nav-hint');
+let navHintShown = false;
 const progEl = document.getElementById('prog');
 const subEl = document.getElementById('loader-sub');
 const scrubber = document.getElementById('scrubber');
@@ -135,7 +137,13 @@ function loadSequence(n) {
       }
 
       progEl.style.width = '100%';
-      setTimeout(() => loaderEl.classList.add('hidden'), 300);
+      setTimeout(() => {
+        loaderEl.classList.add('hidden');
+        if (!navHintShown) {
+          navHintShown = true;
+          navHint.classList.add('visible');
+        }
+      }, 300);
     },
     (xhr) => {
       if (xhr.total) progEl.style.width = (xhr.loaded / xhr.total * 100).toFixed(0) + '%';

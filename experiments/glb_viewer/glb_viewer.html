@@ -36,6 +36,23 @@
 
   <div id="app"></div>
 
+  <div id="nav-hint" aria-hidden="true">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <!-- Vertical arrow -->
+      <line x1="50" y1="22" x2="50" y2="88" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+      <polyline points="43,32 50,21 57,32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" />
+      <polyline points="43,78 50,89 57,78" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" />
+      <!-- Curved horizontal arrow -->
+      <path d="M 17,50 Q 50,67 83,50" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+      <polyline points="-8,-6 0,0 -8,6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" transform="translate(17,50) rotate(207)" />
+      <polyline points="-8,-6 0,0 -8,6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"
+        stroke-linecap="round" transform="translate(83,50) rotate(-27)" />
+    </svg>
+  </div>
+
   <div class="controls">
     <div class="seq-picker">
       <button class="seq-btn active" data-seq="1">Seq. 1</button>

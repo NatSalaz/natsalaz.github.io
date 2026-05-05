@@ -205,6 +205,33 @@ canvas {
   flex-shrink: 0;
 }
 
+@keyframes nav-hint-anim {
+  0%   { opacity: 0; }
+  8%   { opacity: 0.7; }
+  28%  { opacity: 0.1; }
+  48%  { opacity: 0.7; }
+  68%  { opacity: 0.1; }
+  82%  { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+
+#nav-hint {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 25;
+  color: #b0c4c2;
+  pointer-events: none;
+  opacity: 0;
+  width: 112px;
+  height: 112px;
+}
+
+#nav-hint.visible {
+  animation: nav-hint-anim 3.2s ease-in-out forwards;
+}
+
 #loader {
   position: fixed;
   inset: 0;
