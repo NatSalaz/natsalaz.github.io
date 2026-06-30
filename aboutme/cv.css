@@ -21,6 +21,7 @@
 
 /* CV Content */
 .cv-content {
+  font-family: 'Nunito', system-ui, sans-serif;
   flex: 1;
   padding: 40px 50px;
   max-width: 820px;
